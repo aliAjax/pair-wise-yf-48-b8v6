@@ -5,5 +5,9 @@ import App from "./App.vue";
 import { router } from "./router";
 import "./styles.css";
 
-const i18n = createI18n({ legacy: false, locale: "zh-CN", messages: { "zh-CN": { scoring: "匿名评分", schemes: "方案浏览", results: "结果管理" } } });
+const i18n = createI18n({
+  legacy: false,
+  locale: "zh-CN",
+  messages: { "zh-CN": { scoring: "匿名评分", schemes: "方案浏览", ledger: "同步台账", results: "结果管理" } }
+});
 createApp(App).use(createPinia()).use(router).use(i18n).mount("#root");

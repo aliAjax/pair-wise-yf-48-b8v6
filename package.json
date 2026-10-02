@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite --host 0.0.0.0 --port 62013",
     "build": "vue-tsc --noEmit && vite build",
+    "smoke": "esbuild scripts/smoke.ts scripts/smoke-store.ts --bundle --platform=node --format=esm --outdir=/tmp/pw-smoke --out-extension:.js=.mjs --log-level=warning && node /tmp/pw-smoke/smoke.mjs && node /tmp/pw-smoke/smoke-store.mjs",
     "preview": "vite preview --host 0.0.0.0 --port 62013"
   },
   "dependencies": {
